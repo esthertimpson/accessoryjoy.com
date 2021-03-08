@@ -1,0 +1,187 @@
+{
+    padding: 0;
+    margin: 0;
+}
+html, body {
+    height: 100%;
+
+}
+.banner {
+    position: relative;
+    background:url(/images/images.jpg);
+    height: 100%; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;   
+    white-space: nowrap;
+}
+.banner:before {
+    content: '\00a0';
+    display: inline-block;
+    height: 100%;
+    width: 0px;
+    vertical-align: middle;
+}
+.banner:after {
+    content: '\00a0';
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5)
+}
+.banner > hgroup {
+    position: relative;
+    display: inline-block;
+    max-width:720px;
+    margin: 0 auto;
+    vertical-align: middle;
+    white-space: normal;
+    z-index: 100;
+}
+.banner > hgroup > h1 {
+    color: #fff;
+    font: 900 48px/60px;
+    text-transform: uppercase;
+    text-shadow: 0px 2px 3px rgba(0,0,0,.25);
+}
+.banner > hgroup > h2 {
+    color: #fff;
+    font: 100 30px/36px;
+    text-transform: capitalize;
+    text-shadow: 0px 2px 3px rgba(0,0,0,.25)
+}
+.banner > hgroup > a {
+    display: inline-block;
+    background-color: hotpink;
+    border-radius: 24px; 
+    margin: 12px 0 0 0;
+    padding: 9px 24px;
+    color: #fff;
+    font: 500 24px/36px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.banner > hgroup > a:hover {
+    background: deeppink;
+}
+
+
+
+
+
+
+.product-list{
+  overflow:hidden; 
+    list-style: none;
+}
+.product-list > li { 
+    float:left;
+    width:25%;
+    text-align: center;
+    
+   
+}
+.product-list > li > .wrapper { 
+    width:100%;
+}
+.product-list > li > .wrapper > h3 { 
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width:100%;
+    overflow:hidden;
+    text-align: 
+}
+.product-list > li > .wrapper > img { 
+    height:150px;
+
+    
+}
+.product-list > li > h4 { 
+    text-align: center
+}
+.product-list > li > .rating { 
+
+}
+
+@media all and (max-width:600px) {
+ 
+.product-list > li {
+   float: none;
+    width: 100%;
+}
+    
+}
+
+@media all and (min-width:601px) {
+    
+.product-list {
+    max-width:960px;
+    margin: 0 auto;
+    }
+}
+
+
+
+
+
+.product-detail {
+/*    background-image: url(images/images.jpg);*/
+    background-size: cover;
+    text-align: center
+}
+ 
+.product-detail > section {
+    
+}
+
+.product-detail > section > h1 {
+    
+}
+
+.product-detail > section > .photo-gallery {
+    
+}
+
+.product-detail > section > .photo-gallery > .primary-photo {
+   height: 480px;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+.product-detail > section > .photo-gallery > img {
+    max-width: 30%;
+    max-height: 96px;
+    border: 3px solid #ccc;
+    vertical-align: middle
+    
+}
+.prouct-detail > section > h2 {
+    
+}
+
+.product-detail > section > p {
+    
+}
+
+.product-detail > section > form {
+    
+}
+
+.product-detail > section > form > label {
+    
+} 
+
+.product-detail > section > form > a {
+    
+}
+
+
+
+
+
+
+
+
