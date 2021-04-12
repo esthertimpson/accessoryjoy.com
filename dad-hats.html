@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.29/default/snipcart.css" />
+</head>
+    <body>
+        <div class="product-detail">
+        <section>
+            <h1>Retro Trucker Hat</h1>
+            <div class="photo-gallery">
+                <div class="primary-photo" style="background-image: url(images/joyimages/dadhat1.png)">
+                </div>
+                 <img src="images/joyimages/dadhat1.png"/>
+                <img src="images/joyimages/dadhat2.png"/>
+                <img src="images/joyimages/dadhat3.png"/>
+                <img src="images/joyimages/dadhat4.png" />
+            </div>
+        </section>
+        <section>
+            <h2>$17.95</h2>
+            <p>The Retro Trucker Hat has a structured fit with a mesh back that provides both comfort and a stylish look. It is 60% cotton and 40% polyester with a 3.5" crown.</p>
+            <form>
+                <label>
+                    <input type="radio" name="size" value="White">
+                    Small
+                </label>
+                <label>
+                    <input type="radio" name="size" value="Black">
+                    Medium
+                </label>
+                <a class="btn snipcart-add-item" href="#"
+                  data-item-id="Hat001"
+                  data-item-price="17.95"
+                  data-item-url="/paintings/starry-night"
+                  data-item-description="Retro Trucker Hat"
+                  data-item-image="images/second%20pic.png"
+                  data-item-name="Retro Trucker Hat"
+                   data-item-custom1-name="Size"
+                   data-item-custom1-options="Black|White"
+                >Add To Cart</a>
+            </form>
+        </section>
+        </div>
+        <script type="text/javascript">
+            $( ".photo-gallery > img" ).click(function() {
+            var imgSrc= $(this).attr("src");
+            $('.primary-photo').attr('style',"background-image: url("+imgSrc+");");
+            });
+            $( ".product-details form input" ).change(function() {
+                var productSize= $(this).val();
+                $('.snipcart-add-item').attr('data-item-custom1-value',productSize);
+            });
+        </script>
+        <script async src="https://cdn.snipcart.com/themes/v3.0.29/default/snipcart.js"></script>
+        <div id="snipcart" data-config-modal-style="side" data-api-key="ZGQ4NGM0MDctZWU5OC00YzIxLWEzZjctODA4MjNkNjBjMDUzNjM3NDgzOTY2NzU2MjQyMzcx" hidden></div>
+    </body>
+</html>

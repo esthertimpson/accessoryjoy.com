@@ -4,7 +4,13 @@
 }
 html, body {
     height: 100%;
-
+    
+}
+h1, h2,h3,h4,h5,h6 {
+    font-family: 'New Tegomin', serif;
+}
+p {
+   font-family: 'Source Serif Pro', serif; 
 }
 .banner {
     position: relative;

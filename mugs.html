@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.29/default/snipcart.css" />
+</head>
+    <body>
+        <div class="product-detail">
+        <section>
+            <h1>Coffee Mug</h1>
+            <div class="photo-gallery">
+                <div class="primary-photo" style="background-image: url('images/joyimages/mug1.png')">
+                </div>
+                 <img src="images/joyimages/mug1.png"/>
+                <img src="images/joyimages/mug2.png"/>
+                <img src="images/joyimages/mug3.png"/>
+                <img src="images/joyimages/mug4.png" />
+            </div>
+        </section>
+        <section>
+            <h2>$15.90</h2>
+            <p>This sturdy mug is perfect for your morning coffee, afternoon tea, or whatever hot beverage you enjoy. It's glossy white and yields vivid prints that retain their quality when dish-washed and microwaved.</p>
+            <form>
+                <label>
+                    <input type="radio" name="size" value="11oz">
+                    11oz
+                </label>
+                <label>
+                    <input type="radio" name="size" value="15oz">
+                    15oz
+                </label>
+                <a class="btn snipcart-add-item" href="#"
+                  data-item-id="Mascara001"
+                  data-item-price="5.00"
+                  data-item-url="/paintings/starry-night"
+                  data-item-description="Thick annoying black stuff"
+                  data-item-image="images/second%20pic.png"
+                  data-item-name="Mascara"
+                   data-item-custom1-name="Size"
+                   data-item-custom1-options="Small|Medium|Large"
+                >Add To Cart</a>
+            </form>
+        </section>
+        </div>
+        <script type="text/javascript">
+            $( ".photo-gallery > img" ).click(function() {
+            var imgSrc= $(this).attr("src");
+            $('.primary-photo').attr('style',"background-image: url("+imgSrc+");");
+            });
+            $( ".product-details form input" ).change(function() {
+                var productSize= $(this).val();
+                $('.snipcart-add-item').attr('data-item-custom1-value',productSize);
+            });
+        </script>
+        <script async src="https://cdn.snipcart.com/themes/v3.0.29/default/snipcart.js"></script>
+        <div id="snipcart" data-config-modal-style="side" data-api-key="ZGQ4NGM0MDctZWU5OC00YzIxLWEzZjctODA4MjNkNjBjMDUzNjM3NDgzOTY2NzU2MjQyMzcx" hidden></div>
+    </body>
+</html>
