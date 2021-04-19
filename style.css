@@ -14,7 +14,7 @@ p {
 }
 .banner {
     position: relative;
-    background:url(/images/joyimages/mainimage.p);
+    background:url(/images/joyimages/titlepage1.png);
     height: 100%; 
     background-repeat: no-repeat;
     background-size: cover;
@@ -135,7 +135,7 @@ p {
 
 
 .product-detail {
-/*    background-image: url(images/images.jpg);*/
+/*    background-image: url(images/joyimages/titlepage1.png);*/
     background-size: cover;
     text-align: center
 }
