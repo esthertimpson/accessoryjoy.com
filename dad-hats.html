@@ -27,22 +27,29 @@
             <p>The Retro Trucker Hat has a structured fit with a mesh back that provides both comfort and a stylish look. It is 60% cotton and 40% polyester with a 3.5" crown.</p>
             <form>
                 <label>
-                    <input type="radio" name="size" value="White">
+                    <input type="radio" name="size" value="White"
+                    data-variant="8746"   >
                     Small
                 </label>
                 <label>
-                    <input type="radio" name="size" value="Black">
+                    <input type="radio" name="size" value="Black" data-variant="8747">
                     Medium
                 </label>
                 <a class="btn snipcart-add-item" href="#"
                   data-item-id="Hat001"
                   data-item-price="17.95"
-                  data-item-url="/paintings/starry-night"
+                  data-item-url="/dad-hats.html"
                   data-item-description="Retro Trucker Hat"
                   data-item-image="images/joyimages/dadhat1.png"
                   data-item-name="Retro Trucker Hat"
                    data-item-custom1-name="Size"
                    data-item-custom1-options="Black|White"
+                   data-item-custom2-name="variant"
+                   data-item-custom2-type="hidden"
+                   data-item-custom2-value="8318"
+                   data-item-custom3-name="Print File"
+                   data-item-custom3-type="hidden"
+                   data-item-custom3-value="https://hardwarecampaigns.com/images/shirt-print.png">
                 >Add To Cart</a>
             </form>
         </section>
@@ -55,9 +62,12 @@
             $( ".product-details form input" ).change(function() {
                 var productSize= $(this).val();
                 $('.snipcart-add-item').attr('data-item-custom1-value',productSize);
+                var variant= $(this).data('variant');
+                $('.snipcart-add-item').attr('data-item-custom2-value',variant);
             });
         </script>
         <script async src="https://cdn.snipcart.com/themes/v3.0.29/default/snipcart.js"></script>
         <div id="snipcart" data-config-modal-style="side" data-api-key="ODVhZGJjYzAtYjU2OS00YWM0LTk1MjItMDg0OTljNDcyM2NhNjM3NDgzOTY2NzU2MjQyMzcx" hidden></div>
+        
     </body> 
 </html>  
